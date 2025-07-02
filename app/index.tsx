@@ -1,4 +1,4 @@
-import { FirebasAuth } from "@/FireBaseConfig";
+import { FirebasAuth } from "@/FireBaseConfig example";
 import { LoginStyles } from "@/styles/Login.style";
 import {
   sendEmailVerification,
@@ -26,7 +26,7 @@ export default function index() {
   const anonym = useCallback(async () => {
     try {
       const useCredential = await signInAnonymously(FirebasAuth);
-      router.replace("/Todo")
+      router.replace("/Todo");
       console.log("anon user", useCredential.user.uid);
     } catch (e: any) {
       Alert.alert("Something went Wrong");

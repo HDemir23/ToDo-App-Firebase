@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules/
-
+firebaseConfig.ts
 # Expo
 .expo/
 dist/
@@ -37,4 +37,5 @@ yarn-error.*
 *.tsbuildinfo
 
 app-example
+
 FireBaseConfig

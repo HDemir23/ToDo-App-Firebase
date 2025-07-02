@@ -1,5 +1,5 @@
 // services/todoService.ts
-import { db } from "@/FireBaseConfig";
+import { db } from "@/FireBaseConfig example";
 import {
   addDoc,
   collection,

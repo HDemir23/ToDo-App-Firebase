@@ -1,4 +1,4 @@
-import { FirebasAuth } from "@/FireBaseConfig";
+import { FirebasAuth } from "@/FireBaseConfig example";
 import { LoginStyles } from "@/styles/Login.style";
 import { router } from "expo-router";
 import {
