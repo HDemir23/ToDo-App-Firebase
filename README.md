@@ -1,50 +1,115 @@
-# Welcome to your Expo app 👋
+# ✅ ToDo App with Firebase
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A cross-platform React Native To-Do application with Firebase Authentication and Firestore integration. Users can register, login, create, edit, and delete their tasks in real-time. Built with Expo and styled using custom theming for a responsive and clean user experience.
 
-## Get started
+## 📲 Preview
 
-1. Install dependencies
+Coming soon: APK download & demo GIF.
 
-   ```bash
-   npm install
-   ```
+---
 
-2. Start the app
+## 🚀 Features
 
-   ```bash
-   npx expo start
-   ```
+- 🔐 **User Authentication** (Email/Password via Firebase Auth)
+- ✅ **Real-Time To-Do Management** using Firebase Firestore
+- 🌗 **Light/Dark Mode Support** with a custom ThemeContext
+- 📝 **Edit & Delete Support** with modal interaction
+- 📱 **Responsive UI** for Android and Web (Expo-compatible)
+- 🔒 **Protected Routes** (Login required to access main app)
 
-In the output, you'll find options to open the app in a
+---
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+## 🧱 Tech Stack
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **React Native** with Expo
+- **Firebase Auth** & **Firestore**
+- **TypeScript**
+- **Modular file structure** with separation of services, hooks, and styles
+- **Custom Theming** using Context API
+- **EAS Build** support for generating APKs locally
 
-## Get a fresh project
+---
 
-When you're ready, run:
+## 📂 Project Structure
 
-```bash
-npm run reset-project
+```
+📁 app
+├── _layout.tsx       # Expo Router layout
+├── Login.tsx         # Login screen
+├── Todo.tsx          # Main To-Do screen
+│
+📁 services            # Firestore and Auth logic
+📁 hooks               # Custom hooks (e.g. useAddToDo, useEditToDo)
+📁 constants           # ThemeContext and theme definitions
+📁 styles              # Modularized style files
+📁 assets              # Icons, splash, and images
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+---
 
-## Learn more
+## 🔧 Installation
 
-To learn more about developing your project with Expo, look at the following resources:
+### 1. Clone the repository
+```bash
+git clone https://github.com/HDemir23/ToDo-App-Firebase.git
+cd ToDo-App-Firebase
+```
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+### 2. Install dependencies
+```bash
+npm install
+```
 
-## Join the community
+### 3. Add Firebase Configuration
+Create a `.env` file at the root and provide your Firebase project credentials:
 
-Join our community of developers creating universal apps.
+```env
+EXPO_PUBLIC_apiKey=your_api_key
+EXPO_PUBLIC_authDomain=your_project.firebaseapp.com
+EXPO_PUBLIC_projectId=your_project_id
+EXPO_PUBLIC_storageBucket=your_project.appspot.com
+EXPO_PUBLIC_messagingSenderId=your_sender_id
+EXPO_PUBLIC_appId=your_app_id
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+> ⚠️ Do not commit `.env` to GitHub.
+
+### 4. Run the app
+
+```bash
+npx expo start
+```
+
+---
+
+## 📦 Building APK Locally
+
+To generate an Android `.apk` file locally:
+
+```bash
+npx eas build --platform android --profile preview --local
+```
+
+> Ensure Android SDK is set up and `sdk.dir` is defined in `android/local.properties`.
+
+---
+
+## 📌 Todos
+
+- [ ] Add password reset
+- [ ] Push notifications
+- [ ] Firebase Analytics
+- [ ] UI/UX polishing
+
+---
+
+## 🧑‍💻 Author
+
+**A. Hakan Demir**  
+[GitHub](https://github.com/HDemir23) • [LinkedIn](https://www.linkedin.com/in/hakandemirdev)
+
+---
+
+## 📝 License
+
+This project is open-sourced under the [MIT License](LICENSE).
