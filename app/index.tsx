@@ -1,11 +1,11 @@
-import { FirebasAuth } from "@/FireBaseConfig example";
+import { FirebasAuth } from "@/firebaseConfig";
 import { LoginStyles } from "@/styles/Login.style";
+import { router } from "expo-router";
 import {
   sendEmailVerification,
   signInAnonymously,
   signInWithEmailAndPassword,
-} from "@firebase/auth";
-import { router } from "expo-router";
+} from "firebase/auth";
 import React, { useCallback, useState } from "react";
 import {
   Alert,
@@ -89,7 +89,7 @@ export default function index() {
       </TouchableOpacity>
 
       <View style={{ marginTop: 20 }}>
-        <Text>
+        <Text style={style.FooterText}>
           <Text
             style={style.blueLink}
             onPress={() => router.replace("/SignIn")}

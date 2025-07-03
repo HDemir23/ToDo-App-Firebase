@@ -1,4 +1,4 @@
-import { FirebasAuth } from "@/FireBaseConfig example";
+import { FirebasAuth } from "@/firebaseConfig";
 import { LoginStyles } from "@/styles/Login.style";
 import { router } from "expo-router";
 import {
@@ -88,6 +88,10 @@ export default function SignIn() {
       />
       <TouchableOpacity onPress={signIn} style={style.button}>
         <Text style={style.buttonText}>Sign In</Text>
+      </TouchableOpacity>
+
+      <TouchableOpacity onPress={() => router.replace("/")}>
+        <Text style={style.blueLink}>Back to LogIn</Text>
       </TouchableOpacity>
     </View>
   );

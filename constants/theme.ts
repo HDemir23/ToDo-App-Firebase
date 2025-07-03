@@ -10,6 +10,7 @@ export const lightTheme = {
   primary: "#B8860B", // Golden primary (e.g. buttons)
   primaryTextOnPrimary: "#FFFFFF", // Text on primary (contrast)
   accent: "#D8CBB5", // Warm accent tone
+  textLink: "#007AFF",
 
   button: {
     background: "#B8860B",
@@ -44,6 +45,7 @@ export const darkTheme = {
   primary: "#D4AF37", // Rich gold
   primaryTextOnPrimary: "#000000", // Black text on gold
   accent: "#C0AB7F", // Warm metallic tone
+  textLink: "#58a6ff",
 
   button: {
     background: "#D4AF37",

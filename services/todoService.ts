@@ -1,5 +1,7 @@
 // services/todoService.ts
-import { db } from "@/FireBaseConfig example";
+
+import { db } from "@/firebaseConfig";
+import { TodoType } from "@/Types/Todo";
 import {
   addDoc,
   collection,
@@ -46,7 +48,12 @@ export const deleteTodo = async (uid: string, id: string) => {
 export const updateTodo = async (
   uid: string,
   id: string,
-  data: { text?: string; completed?: boolean }
+  data: Partial<TodoType>
 ) => {
-  await updateDoc(doc(db, `users/${uid}/todos/${id}`), data);
+  const filteredData = Object.fromEntries(
+    Object.entries(data).filter(([_, v]) => v !== undefined)
+  );
+
+  const docRef = doc(db, "users", uid, "todos", id);
+  await updateDoc(docRef, filteredData);
 };

@@ -10,7 +10,7 @@ export const TodoStyles = () => {
       flex: 1,
       backgroundColor: theme.background,
       paddingHorizontal: 16,
-      paddingTop: 50,
+      paddingTop: 100,
     }),
     [theme]
   );
@@ -38,10 +38,66 @@ export const TodoStyles = () => {
   );
   const FlatListItem: ViewStyle = useMemo(
     () => ({
+      flexDirection: "row",
       padding: 12,
       marginBottom: 10,
-      backgroundColor: theme.inputBackground,
+      backgroundColor: theme.card,
       borderRadius: 8,
+    }),
+    [theme]
+  );
+
+  const TaskStyle: TextStyle = useMemo(
+    () => ({
+      color: theme.foreground,
+      fontSize: 16,
+    }),
+    [theme]
+  );
+
+  const button: ViewStyle = useMemo(
+    () => ({
+      width: "100%",
+      height: 50,
+      borderRadius: 10,
+      marginTop: 20,
+      backgroundColor: theme.button.background,
+      justifyContent: "center",
+      alignItems: "center",
+    }),
+    [theme]
+  );
+
+  const deleteButton: ViewStyle = useMemo(
+    () => ({
+      backgroundColor: "red",
+      borderRadius: 12,
+      paddingVertical: 12,
+      paddingHorizontal: 20,
+      minWidth: 80, // geniş ekranlar için oran bozulmaz
+      alignItems: "center",
+      justifyContent: "center",
+      marginVertical: 8,
+      marginHorizontal: 12,
+    }),
+    [theme]
+  );
+
+  const buttonText: TextStyle = useMemo(
+    () => ({
+      color: theme.button.text,
+      fontSize: 16,
+      fontWeight: "600",
+    }),
+    [theme]
+  );
+
+  const title: TextStyle = useMemo(
+    () => ({
+      color: theme.foreground,
+      fontSize: 28,
+      fontWeight: "bold",
+      marginBottom: 20,
     }),
     [theme]
   );
@@ -53,5 +109,10 @@ export const TodoStyles = () => {
     input,
     FlatList,
     FlatListItem,
+    button,
+    buttonText,
+    title,
+    TaskStyle,
+    deleteButton,
   };
 };

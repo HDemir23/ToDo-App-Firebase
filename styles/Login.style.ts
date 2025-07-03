@@ -23,11 +23,12 @@ export const LoginStyles = () => {
       fontWeight: "bold",
       marginBottom: 20,
     }),
-    []
+    [theme]
   );
 
   const input: TextStyle = useMemo(
     () => ({
+      color: theme.foreground,
       width: "100%",
       height: 50,
       borderColor: theme.border,
@@ -64,11 +65,19 @@ export const LoginStyles = () => {
 
   const blueLink: TextStyle = useMemo(
     () => ({
-      color: "blue",
+      color: theme.textLink,
     }),
     [theme]
   );
 
+  const FooterText: TextStyle = useMemo(
+    () => ({
+      color: theme.foreground,
+      fontSize: 16,
+      fontWeight: "300",
+    }),
+    [theme]
+  );
   const asd: TextStyle = useMemo(() => ({}), [theme]);
 
   return {
@@ -77,6 +86,7 @@ export const LoginStyles = () => {
     input,
     button,
     buttonText,
-    blueLink
+    blueLink,
+    FooterText,
   };
 };
