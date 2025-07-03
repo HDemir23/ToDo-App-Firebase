@@ -72,7 +72,6 @@ EXPO_PUBLIC_messagingSenderId=your_sender_id
 EXPO_PUBLIC_appId=your_app_id
 ```
 
-> ⚠️ Do not commit `.env` to GitHub.
 
 ### 4. Run the app
 
